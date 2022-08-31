@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Parisienne&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Aboreto", cursive;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(rgba(104, 3, 3, 0.719), rgba(87, 11, 11, 0.747)),
+    url(https://images.unsplash.com/photo-1581680062469-1c8b88f4bb3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    label {
+      align-self: flex-start;
+      margin-left: 1.7rem;
+      font-weight: 500;
+    }
+    input {
+      width: 25rem;
+      border-radius: 2rem;
+      margin: 1rem 0 2rem;
+      padding: 0.7rem 1.5rem;
+      background: rgb(225 160 192);
+      color: #000;
+    }
+    button {
+      margin-left: 8rem;
+      border-radius: 2rem;
+      padding: 0.6rem 1.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      background-color: transparent;
+      color: rgb(225 160 192);
+      border: 2px solid rgb(225 160 192);
+      transition: 0.4s ease;
+      &:hover {
+        background: rgb(225 160 192);
+        color: black;
+      }
+    }
+  }
+  .outputs {
+    text-align: center;
+    width: 50%;
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+    }
+    h2 {
+      margin: 1rem 0;
+    }
+    span {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    width: 95;
+    flex-direction: column-reverse;
+    .outputs {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+    .inputs {
+      align-items: center;
+      width: 100%;
+      label {
+        margin-left: 0;
+        align-self: center;
+      }
+      button {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 957px) {
+  .wrapper {
+    .outputs {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 689px) {
+  .wrapper {
+    .outputs {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 517px) {
+  .wrapper {
+    .outputs {
+      h1 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 427px) {
+  .wrapper {
+    .outputs {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+    .inputs {
+      input {
+        width: 20rem;
+      }
+      label {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .wrapper {
+    .outputs {
+      h1 {
+        font-size: 0.8rem;
+      }
+    }
+    .inputs {
+      input {
+        width: 18rem;
+      }
+    }
+  }
+}
